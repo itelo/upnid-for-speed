@@ -1,10 +1,55 @@
 import React from "react";
+import useKeyboard from "./useKeyboard";
+import { motion } from "framer-motion";
+
+type CarPositions = "center" | "left" | "right";
 
 function App() {
+  const [carPosition, setT] = React.useState("center" as CarPositions);
   const size =
     window.innerWidth > window.innerHeight
       ? window.innerHeight
       : window.innerWidth;
+
+  const handleKeypress = React.useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "a" || e.key === "ArrowLeft") {
+        if (carPosition === "center") {
+          setT("left");
+        } else if (carPosition === "right") {
+          setT("center");
+        }
+      }
+
+      if (e.key === "d" || e.key === "ArrowRight") {
+        if (carPosition === "center") {
+          setT("right");
+        } else if (carPosition === "left") {
+          setT("center");
+        }
+      }
+    },
+    [carPosition]
+  );
+
+  console.log(carPosition);
+
+  useKeyboard({
+    onKeypress: handleKeypress
+  });
+
+  const variants = {
+    center: {
+      translateX: 0
+    },
+    left: {
+      translateX: -size * 0.3
+    },
+    right: {
+      translateX: size * 0.3
+    }
+  };
+
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <div style={{ position: "relative", height: size, width: size }}>
@@ -16,15 +61,17 @@ function App() {
             width: size
           }}
         />
-        <img
+        <motion.img
           alt="car"
+          variants={variants}
+          animate={carPosition}
           src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff05e46f1-8333-425c-a610-cc1e6cdda6d1%2FCARRO.png?table=block&id=50eaa5d5-bb41-486e-9638-efcdf1b5b584&width=1320&cache=v2"
           style={{
-            position: "absolute",
             top: size * 0.7,
             left: (size - size * 0.28) / 2 - size * 0.02,
             height: size * 0.28,
-            width: size * 0.28
+            width: size * 0.28,
+            position: "absolute"
           }}
         />
       </div>
