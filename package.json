@@ -11,9 +11,11 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^5.0.1",
+    "bluebird": "^3.7.2",
     "framer-motion": "^1.9.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-lottie": "^1.2.3",
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1",
     "typescript": "~3.7.2"
@@ -38,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.30",
+    "@types/react-lottie": "^1.2.3"
   }
 }

@@ -18,7 +18,6 @@ type useKeyboardProps = {
  * Hook
  */
 const useKeyboard = (props: useKeyboardProps) => {
-console.log({keypress: '12'})
   React.useEffect(() => {
     window.addEventListener("keydown", props.onKeypress, true);
 
