@@ -2,15 +2,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import roadGif from "../../assets/road.gif";
-import { useWindowSize } from "../../hooks/useWindowSize";
 import useKeyboard from "../../hooks/useKeyboard";
 import { useStep } from "../../hooks/useStep";
 import CounterScreen from "../CounterScreen/CounterScreen";
 import { useNitro } from "../../hooks/useNitro";
 import PauseScreen from "../PauseScreen/PauseScreen";
-import { CarAsset, ObjectInRoadAsset, Typography, Nitro, Button } from "../../components";
+import {
+  CarAsset,
+  ObjectInRoadAsset,
+  Typography,
+  Nitro,
+  Button
+} from "../../components";
 import { generateRoad, matrix, getNewPos } from "./utils";
-
+import { SizeContext } from "../../context";
 
 type ArgumentTypes<F extends Function> = F extends (...args: infer A) => any
   ? A
@@ -32,8 +37,7 @@ const Game = (props: GameProps) => {
 
   const [posR, setPosR] = React.useState(generateRoad(20));
 
-  const { height: currentHeight, width: currentWidth } = useWindowSize();
-  const size = currentWidth > currentHeight ? currentHeight : currentWidth;
+  const { size } = React.useContext(SizeContext);
 
   const handleKeypress = React.useCallback(
     (e: KeyboardEvent) => {
@@ -65,7 +69,6 @@ const Game = (props: GameProps) => {
     },
     [step, carPosition, setStep, nitro]
   );
-
 
   useKeyboard({
     onKeypress: handleKeypress
@@ -145,9 +148,13 @@ const Game = (props: GameProps) => {
               width: size
             }}
           />
-          <div style={{position: 'absolute', top: 25, right: 25}}>
-            <Typography family="PressStart2P" color="yellow" style={{margin: '0.3rem 1rem', fontSize: '2rem'}} >
-              {pointsCounter} <span style={{fontSize: '2rem'}}>points</span>
+          <div style={{ position: "absolute", top: 25, right: 25 }}>
+            <Typography
+              family="PressStart2P"
+              color="yellow"
+              style={{ margin: "0.3rem 1rem", fontSize: "2rem" }}
+            >
+              {pointsCounter} <span style={{ fontSize: "2rem" }}>points</span>
             </Typography>
           </div>
           <CarAsset size={size} matrix={matrix} position={carPosition} />

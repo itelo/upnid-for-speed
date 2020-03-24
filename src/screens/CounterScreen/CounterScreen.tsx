@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { SizeContext } from "../../context";
 
 type CounterScreenProps = {
   onFinish: () => void;
@@ -16,9 +16,7 @@ const Text = styled(motion.p)`
 `;
 
 const CounterScreen = ({ onFinish }: CounterScreenProps) => {
-  const { height: currentHeight, width: currentWidth } = useWindowSize();
-  const size = currentWidth > currentHeight ? currentHeight : currentWidth;
-
+  const {size} = React.useContext(SizeContext);
   const [counter, setCounter] = React.useState(3);
 
   React.useEffect(() => {

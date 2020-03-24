@@ -1,8 +1,7 @@
 import React from "react";
-import { Button } from "../../components";
 import styled from "styled-components";
-import Typography from "../../components/Typography/Typography";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { Button, Typography } from "../../components";
+import { SizeContext } from "../../context";
 
 type PauseScreenProps = {
   onClickContinue: ArgumentTypes<typeof Button>[number]["onClick"];
@@ -31,7 +30,6 @@ const BackgroundScreen = styled.div<BackgroundScreen>`
   left: 0;
 `;
 
-  // display: flex;
 const ContinerContainer = styled.div`
   flex-direction: column;
   position: absolute;
@@ -47,8 +45,7 @@ const MessageContainer = styled.div`
 `;
 
 const PauseScreen = (props: PauseScreenProps) => {
-  const { height: currentHeight, width: currentWidth } = useWindowSize();
-  const size = currentWidth > currentHeight ? currentHeight : currentWidth;
+  const { size } = React.useContext(SizeContext);
   return (
     <BackgroundScreen size={size}>
       <Typography family="FasterOne" color="blue">
@@ -67,11 +64,13 @@ const PauseScreen = (props: PauseScreenProps) => {
             {props.buttonLabel}
           </Typography>
         </Button>
-        {!!props.buttonLabel2 && <Button onClick={props.onClickExit}>
-          <Typography family="Monofett" color="yellow">
-            {props.buttonLabel2}
-          </Typography>
-        </Button>}
+        {!!props.buttonLabel2 && (
+          <Button onClick={props.onClickExit}>
+            <Typography family="Monofett" color="yellow">
+              {props.buttonLabel2}
+            </Typography>
+          </Button>
+        )}
       </ContinerContainer>
     </BackgroundScreen>
   );
