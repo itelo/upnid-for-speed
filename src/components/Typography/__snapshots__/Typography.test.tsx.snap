@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Typography /> test basic render with color='blue' 1`] = `
+.c0 {
+  font-family: "Faster One",cursive;
+  color: rgb(86,117,184);
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+<p
+  class="c0"
+  color="blue"
+  data-testid="text"
+>
+  hello
+</p>
+`;
+
+exports[`<Typography /> test basic render with color='yellow' 1`] = `
+.c0 {
+  font-family: "Faster One",cursive;
+  color: rgb(234,199,133);
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+<p
+  class="c0"
+  color="yellow"
+  data-testid="text"
+>
+  hello
+</p>
+`;
+
+exports[`<Typography /> test basic render with family='FasterOne' 1`] = `
+.c0 {
+  font-family: "Faster One",cursive;
+  color: rgb(234,199,133);
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+<p
+  class="c0"
+  color="yellow"
+  data-testid="text"
+>
+  hello
+</p>
+`;
+
+exports[`<Typography /> test basic render with family='Monofett' 1`] = `
+.c0 {
+  font-family: "Monofett",cursive;
+  color: rgb(234,199,133);
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+<p
+  class="c0"
+  color="yellow"
+  data-testid="text"
+>
+  hello
+</p>
+`;
+
+exports[`<Typography /> test basic render with family='PressStart2P' 1`] = `
+.c0 {
+  font-family: "Press Start 2P",cursive;
+  color: rgb(234,199,133);
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+<p
+  class="c0"
+  color="yellow"
+  data-testid="text"
+>
+  hello
+</p>
+`;
+
+exports[`<Typography /> test basic render without passing any props 1`] = `
+.c0 {
+  font-family: "Faster One",cursive;
+  color: rgb(234,199,133);
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+<p
+  class="c0"
+  color="yellow"
+  data-testid="text"
+>
+  hello
+</p>
+`;

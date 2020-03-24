@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarAsset /> test snapshot 1`] = `
+.c0 {
+  top: 70px;
+  left: 34px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+}
+
+<img
+  alt="car"
+  class="c0"
+  data-testid="car-asset"
+  size="100"
+  src="car.png"
+/>
+`;

@@ -7,24 +7,15 @@ type CounterScreenProps = {
   onFinish: () => void;
 };
 
-const Box = styled(motion.div)`
-  /* width: 150px;
-  height: 150px;
-  background: white;
-  border-radius: 30px; */
-`;
-
-
 const Text = styled(motion.p)`
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 8rem;
   text-align: center;
   color: rgb(86, 117, 184);
   margin: 0;
 `;
 
-
-const CounterScreen = ({onFinish}: CounterScreenProps) => {
+const CounterScreen = ({ onFinish }: CounterScreenProps) => {
   const { height: currentHeight, width: currentWidth } = useWindowSize();
   const size = currentWidth > currentHeight ? currentHeight : currentWidth;
 
@@ -38,19 +29,21 @@ const CounterScreen = ({onFinish}: CounterScreenProps) => {
         return setCounter(currentCounter => currentCounter - 1);
       }
     }, 1000);
-  }, [counter, onFinish])
+  }, [counter, onFinish]);
 
-  const CounterJSX = ({ counter: currentCounter}: {counter: number}) => <Box
-        initial={{ scale: 0 }}
-        animate={{ rotate: 360, scale: 1 }}
-        transition={{
-          stiffness: 260,
-          damping: 20,
-          duration: 1
-        }}
-      >
-        <Text>{currentCounter === 0 ? 'GO' : currentCounter}</Text>
-      </Box>
+  const CounterJSX = ({ counter: currentCounter }: { counter: number }) => (
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ rotate: 360, scale: 1 }}
+      transition={{
+        stiffness: 260,
+        damping: 20,
+        duration: 1
+      }}
+    >
+      <Text>{currentCounter === 0 ? "GO" : currentCounter}</Text>
+    </motion.div>
+  );
 
   return (
     <div
@@ -59,9 +52,9 @@ const CounterScreen = ({onFinish}: CounterScreenProps) => {
         width: size,
         backgroundColor: "black",
         position: "absolute",
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         zIndex: 100,
         top: 0,
         left: 0
@@ -71,8 +64,6 @@ const CounterScreen = ({onFinish}: CounterScreenProps) => {
     </div>
   );
 };
-// <Text>2</Text>
-// <Text>3</Text>
 
 CounterScreen.defaultProps = {};
 

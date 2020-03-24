@@ -23,9 +23,21 @@ const NitroBarContent = styled(motion.div)`
 
 const Nitro = (props: NitroProps) => {
   return (
-    <NitroBarContainer>
-      <Typography style={{fontSize: '1.5rem', position: 'absolute', margin: '0.3rem 1rem'}} family="PressStart2P" color="yellow">Nitro</Typography>
+    <NitroBarContainer data-testid="nitrobar-container">
+      <Typography
+        data-testid="nitro-text"
+        style={{
+          fontSize: "1.5rem",
+          position: "absolute",
+          margin: "0.3rem 1rem"
+        }}
+        family="PressStart2P"
+        color="yellow"
+      >
+        Nitro
+      </Typography>
       <NitroBarContent
+        data-testid="nitrobar-content"
         animate={{
           width: `${10 * props.value}%`
         }}

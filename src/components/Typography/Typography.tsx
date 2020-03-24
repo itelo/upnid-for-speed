@@ -17,19 +17,15 @@ const TypographyStyled = styled(motion.p)<TypographyProps>`
     if (family === "Monofett") {
       return 'font-family: "Monofett", cursive;';
     }
-    if (family === "PressStart2P") {
-      return 'font-family: "Press Start 2P", cursive;';
-    }
-    return 'font-family: "Roboto", cursive;';
+
+    return 'font-family: "Press Start 2P", cursive;';
   }}
   ${({ color }) => {
     if (color === "blue") {
       return "color: rgb(86, 117, 184);";
-    }
-    if (color === "yellow") {
+    } else {
       return "color: rgb(234, 199, 133);";
     }
-    return "color: black;";
   }}
   
   font-size: 4.5rem;
@@ -41,6 +37,9 @@ const Typography = (props: TypographyProps) => {
   return <TypographyStyled {...props} />;
 };
 
-Typography.defaultProps = {};
+Typography.defaultProps = {
+  family: 'FasterOne',
+  color: 'yellow'
+};
 
 export default Typography;

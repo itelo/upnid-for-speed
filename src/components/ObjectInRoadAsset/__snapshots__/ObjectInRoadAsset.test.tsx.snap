@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CarAsset /> test basic render of lightning 1`] = `
+.c0 {
+  top: 38px;
+  left: 34px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+}
+
+<img
+  alt="lightning"
+  class="c0"
+  data-testid="obj-img"
+  size="100"
+  src="lightning-bolt.png"
+  style="transform: translateX(-35px) translateY(30px) scale(1) translateZ(0);"
+/>
+`;
+
+exports[`<CarAsset /> test basic render of rock 1`] = `
+.c0 {
+  top: 38px;
+  left: 34px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+}
+
+<img
+  alt="rock"
+  class="c0"
+  data-testid="obj-img"
+  size="100"
+  src="rock.png"
+  style="transform: translateX(-35px) translateY(30px) scale(1) translateZ(0);"
+/>
+`;
+
+exports[`<CarAsset /> test if the onAnimationComplete is called 1`] = `
+.c0 {
+  top: 38px;
+  left: 34px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+}
+
+<img
+  alt="lightning"
+  class="c0"
+  data-testid="obj-img"
+  size="100"
+  src="lightning-bolt.png"
+  style="transform: translateX(-35px) translateY(30px) scale(1) translateZ(0);"
+/>
+`;
+
+exports[`<CarAsset /> test if the onAnimationComplete is called 2`] = `
+.c0 {
+  top: 38px;
+  left: 34px;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+}
+
+<img
+  alt="rock"
+  class="c0"
+  data-testid="obj-img"
+  size="100"
+  src="rock.png"
+  style="transform: translateX(-35px) translateY(30px) scale(1) translateZ(0);"
+/>
+`;

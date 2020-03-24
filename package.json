@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^10.0.1",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,6 +43,8 @@
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.30",
-    "@types/react-lottie": "^1.2.3"
+    "@types/react-lottie": "^1.2.3",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "jest-styled-components": "^7.0.0"
   }
 }

@@ -12,16 +12,17 @@ type CarAssetProps = {
 const CarAssetStyled = styled(motion.img)<{
   size: number;
 }>`
-  top: ${({ size }) => size * 0.7}px;
-  left: ${({ size }) => (size - size * 0.28) / 2 - size * 0.02}px;
-  height: ${({ size }) => size * 0.28}px;
-  width: ${({ size }) => size * 0.28}px;
+  top: ${({ size }) => (size * 70)/100}px;
+  left: ${({ size }) => (size - (size * 28)/100) / 2 - ((size * 2)/100)}px;
+  height: ${({ size }) => (size * 28)/100}px;
+  width: ${({ size }) => (size * 28)/100}px;
   position: absolute;
 `;
 
 const CarAsset = (props: CarAssetProps) => {
   return (
     <CarAssetStyled
+      data-testid="car-asset"
       alt="car"
       size={props.size}
       animate={{

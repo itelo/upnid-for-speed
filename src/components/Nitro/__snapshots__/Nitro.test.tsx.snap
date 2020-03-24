@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nitro /> test snapshot 1`] = `
+.c1 {
+  font-family: "Press Start 2P",cursive;
+  color: rgb(234,199,133);
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+.c0 {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  border: 5px solid black;
+  width: 10rem;
+  height: 2rem;
+}
+
+.c2 {
+  background: blue;
+  height: 100%;
+}
+
+<div
+  class="c0"
+  data-testid="nitrobar-container"
+>
+  <p
+    class="c1"
+    color="yellow"
+    data-testid="nitro-text"
+    style="font-size: 1.5rem; position: absolute; margin: 0.3rem 1rem;"
+  >
+    Nitro
+  </p>
+  <div
+    class="c2"
+    data-testid="nitrobar-content"
+    style="width: 0px;"
+  />
+</div>
+`;

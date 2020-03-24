@@ -21,10 +21,10 @@ type ObjectInRoadAssetProps = {
 const ObjectImgStyled = styled(motion.img)<{
   size: number;
 }>`
-  top: ${({ size }) => size * 0.38}px;
-  left: ${({ size }) => (size - size * 0.28) / 2 - size * 0.02}px;
-  height: ${({ size }) => size * 0.28}px;
-  width: ${({ size }) => size * 0.28}px;
+  top: ${({ size }) => (size * 38)/100}px;
+  left: ${({ size }) => (size - (size * 28)/100) / 2 - (size * 2)/100}px;
+  height: ${({ size }) => (size * 28)/100}px;
+  width: ${({ size }) => (size * 28)/100}px;
   position: absolute;
 `;
 
@@ -41,6 +41,7 @@ const ObjectInRoadAsset = (props: ObjectInRoadAssetProps) => {
           ease: "easeInOut"
         }
       }}
+      data-testid="obj-img"
       style={{ scale: 0.18 }}
       onAnimationComplete={props.onAnimationComplete(props.obj, props.index)}
       src={props.obj.type === "rock" ? rockImg : lightningImg}

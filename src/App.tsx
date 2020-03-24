@@ -43,7 +43,7 @@ const InputGame = styled(motion.input)`
 `;
 
 function App() {
-  const { step, next, previous } = useStep(0, 3);
+  const { step, next, previous, setStep } = useStep(0, 3);
   const [username, setUsername] = React.useState("");
 
   const { height: currentHeight, width: currentWidth } = useWindowSize();
@@ -66,13 +66,11 @@ function App() {
         position: "relative"
       }}
     >
-      {step !== 2 && (
-          <Text>Upnid for speed</Text>
-      )}
+      {step !== 2 && <Text>Upnid for speed</Text>}
       {step === 0 && (
-          <Button autoFocus onClick={() => next()}>
-            <TextGame>START</TextGame>
-          </Button>
+        <Button autoFocus onClick={() => setStep(2)}>
+          <TextGame>START</TextGame>
+        </Button>
       )}
       {step !== 2 && (
         <div
