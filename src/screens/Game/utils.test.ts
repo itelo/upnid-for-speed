@@ -110,4 +110,9 @@ describe("Game utils", () => {
     expect(x2).toBe(2);
     expect(y2).toBe(0);
   });
+
+  it("getNewPos invalid direction", () => {
+    // @ts-ignore
+    expect(() => getNewPos([0,0], "upper")).toThrow();
+  })
 });

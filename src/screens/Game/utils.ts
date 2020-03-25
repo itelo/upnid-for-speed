@@ -59,7 +59,8 @@ export const getNewPos = (
         return [currentX, currentY - 1];
       }
   }
-  return [1, 1];
+
+  throw new Error('Should pass one of the following directitons: "left", "right", "up" or "down"');
 };
 
 
