@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/upnid-for-speed/static/css/main.68a95506.chunk.css",
+    "main.js": "/upnid-for-speed/static/js/main.1e557648.chunk.js",
+    "main.js.map": "/upnid-for-speed/static/js/main.1e557648.chunk.js.map",
+    "runtime-main.js": "/upnid-for-speed/static/js/runtime-main.ab41cc80.js",
+    "runtime-main.js.map": "/upnid-for-speed/static/js/runtime-main.ab41cc80.js.map",
+    "static/js/2.e1dfaeb9.chunk.js": "/upnid-for-speed/static/js/2.e1dfaeb9.chunk.js",
+    "static/js/2.e1dfaeb9.chunk.js.map": "/upnid-for-speed/static/js/2.e1dfaeb9.chunk.js.map",
+    "index.html": "/upnid-for-speed/index.html",
+    "precache-manifest.35bca6356e61dadbb71a2504fc0616e4.js": "/upnid-for-speed/precache-manifest.35bca6356e61dadbb71a2504fc0616e4.js",
+    "service-worker.js": "/upnid-for-speed/service-worker.js",
+    "static/css/main.68a95506.chunk.css.map": "/upnid-for-speed/static/css/main.68a95506.chunk.css.map",
+    "static/js/2.e1dfaeb9.chunk.js.LICENSE.txt": "/upnid-for-speed/static/js/2.e1dfaeb9.chunk.js.LICENSE.txt",
+    "static/media/car.png": "/upnid-for-speed/static/media/car.56be0a4e.png",
+    "static/media/road.gif": "/upnid-for-speed/static/media/road.d0d2cd17.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab41cc80.js",
+    "static/js/2.e1dfaeb9.chunk.js",
+    "static/css/main.68a95506.chunk.css",
+    "static/js/main.1e557648.chunk.js"
+  ]
+}
