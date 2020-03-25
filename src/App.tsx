@@ -66,9 +66,12 @@ function App() {
         position: "relative"
       }}
     >
+      <audio src="https://vgmdownloads.com/soundtracks/need-for-speed-underground-2/auvmwrwi/01-snoop%20dogg%20ft%20the%20doors%20-%20riders%20on%20the%20storm%28fredwreck%20remix%29-ost-2004-djn.mp3" autoPlay>
+         <p>If you are reading this, it is because your browser does not support the audio element.     </p>	        
+      </audio>
       {step !== 2 && <Text>Upnid for speed</Text>}
       {step === 0 && (
-        <Button autoFocus onClick={() => setStep(2)}>
+        <Button autoFocus onClick={() => setStep(1)}>
           <TextGame>START</TextGame>
         </Button>
       )}

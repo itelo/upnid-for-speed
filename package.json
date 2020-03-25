@@ -42,9 +42,11 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.2.1",
     "@types/bluebird": "^3.5.30",
     "@types/react-lottie": "^1.2.3",
     "jest-environment-jsdom-sixteen": "^1.0.3",
-    "jest-styled-components": "^7.0.0"
+    "jest-styled-components": "^7.0.0",
+    "react-test-renderer": "^16.13.1"
   }
 }

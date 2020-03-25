@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import roadGif from "../../assets/road.gif";
-import useKeyboard from "../../hooks/useKeyboard";
-import { useStep } from "../../hooks/useStep";
+import { useStep, useKeyboard } from "../../hooks";
 import CounterScreen from "../CounterScreen/CounterScreen";
 import { useNitro } from "../../hooks/useNitro";
 import PauseScreen from "../PauseScreen/PauseScreen";
@@ -155,6 +154,15 @@ const Game = (props: GameProps) => {
               style={{ margin: "0.3rem 1rem", fontSize: "2rem" }}
             >
               {pointsCounter} <span style={{ fontSize: "2rem" }}>points</span>
+            </Typography>
+          </div>
+          <div style={{ position: "absolute", top: 'calc(25px + 3rem)', right: 25 }}>
+            <Typography
+              family="PressStart2P"
+              color="yellow"
+              style={{ margin: "0.3rem 1rem", fontSize: "2rem" }}
+            >
+              {props.username}
             </Typography>
           </div>
           <CarAsset size={size} matrix={matrix} position={carPosition} />
