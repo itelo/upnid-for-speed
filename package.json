@@ -2,6 +2,7 @@
   "name": "car-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://itelofilho.io/upnid-for-speed",
   "dependencies": {
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^10.0.1",
@@ -21,6 +22,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
@@ -45,6 +47,7 @@
     "@testing-library/react-hooks": "^3.2.1",
     "@types/bluebird": "^3.5.30",
     "@types/react-lottie": "^1.2.3",
+    "gh-pages": "^2.2.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
     "jest-styled-components": "^7.0.0",
     "react-test-renderer": "^16.13.1"
